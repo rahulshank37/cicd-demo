@@ -1,16 +1,6 @@
 const request = require('supertest');
 const app = require('./server');
 
-let server;
-
-beforeAll(() => {
-  server = app.listen(4000);
-});
-
-afterAll(() => {
-  server.close();
-});
-
 describe('API Endpoints', () => {
 
   test('GET / should return welcome message', async () => {
